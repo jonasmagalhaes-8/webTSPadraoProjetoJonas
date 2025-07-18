@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Pessoa + Accordion</title>
+  <link rel="stylesheet" href="/src/styles/accordion.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+  <script type="module" src="/src/main.ts"></script>
+</head>
+
+<body>
+
+  <form>
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="number" name="idade" placeholder="Idade" required min="18" />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <template id="accordion-template">
+    <details>
+      <summary>
+        <div class="nome-idade"></div>
+        <div class="marker">▶</div>
+        <button type="button" class="btn-remove" title="Remover" style="margin-left: auto; cursor: pointer;">✖</button>
+      </summary>
+      <div class="detalhes"></div>
+    </details>
+  </template>
+
+  <div id="container"></div>
+</body>
+
+</html>
